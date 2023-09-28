@@ -53,7 +53,7 @@ void main() {
   });
 
   ///set - {} , unorderd collection , does not support duplicate values
-  var set1 = {1,2,3,9,10,11}; // literal way of set creation
+  var set1 = {1, 2, 3, 9, 10, 11}; // literal way of set creation
   var set2 = {1, 2, 3, 4, 5, 6, 7, 1, 2, 3}; // dynamic set
   Set<int> set3 = {10, 20, 30, 40};
   print('set1: $set1');
@@ -65,7 +65,27 @@ void main() {
   for (int index = 0; index < set3.length; index++) {
     print(set3.elementAt(index));
   }
-  print(set1.union(set2));        // combine both set
+  print(set1.union(set2)); // combine both set
   print(set1.intersection(set2)); // common values in both set
-  print(set2.difference(set1)); // values present in set2 and not present in set1
+  print(
+      set2.difference(set1)); // values present in set2 and not present in set1
+
+  ///map - store values as key-value pairs keys must be unique values can be same or different
+  ///Map<key,value>
+  Map<String, dynamic> map1 = {
+    'name': 'Anoop',
+    'age': 20,
+    'mark': 9.1,
+    'phone': 098765432
+  };
+  map1.addAll({'email': 'anoop@gmail.com'});
+  map1['pincode'] = 683562;
+  print(map1);
+  map1['age'] = 32;
+  print(map1);
+  map1.forEach((key, value) {
+    print('$key:$value');
+  });
+  print(map1.containsKey('hello'));
+  print(map1.containsValue(32));
 }
