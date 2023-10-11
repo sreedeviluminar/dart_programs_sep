@@ -20,8 +20,7 @@ class ChildX extends X{
 }
  void main(){
   ChildX obj = ChildX(100);
-  /// parent class constructor will starts executes with
-   /// child class constructor
+  /// parent class constructor will starts executes with child class constructor
  }
  ///every parent class constructor except default we must use
 ///super constructor invocation with child class constructor
