@@ -2,7 +2,7 @@ import 'dart:io';
 void main(){
   print('enter a number');
   int num = int.parse(stdin.readLineSync()!);
-  int temp = num , rev =0, rem ;
+  int temp = num , rev = 0, rem ;
  
   while(num > 0){
      rem = num % 10;   // split
